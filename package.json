@@ -1,6 +1,6 @@
 {
   "name": "@wildegor/winston-telegram",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Telegram Transport for Winston",
   "author": "Kartashov Egor",
   "private": false,
