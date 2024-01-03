@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "strict": true,
+    "incremental": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
