@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "strict": true,
+    "incremental": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+  "paths": {
+    "@src/*": [
+      "src/*"
+    ],
+    "@modules/*": [
+      "src/modules/*"
+    ],
+    "@config/*": [
+      "src/infrastructure/configs/*"
+    ],
+    "@adapters/*": [
+      "src/infrastructure/adapters/*"
+    ],
+    "@shared/*": [
+      "src/shared/*"
+    ]
+  }
+}

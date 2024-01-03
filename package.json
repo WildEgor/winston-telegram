@@ -1,0 +1,78 @@
+{
+  "name": "@wildegor/winston-telegram",
+  "version": "0.0.1",
+  "description": "A Telegram Transport for Winston",
+  "author": "Kartashov Egor",
+  "private": false,
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wildegor/winston-telegram.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wildegor/winston-telegram/issues"
+  },
+  "homepage": "https://github.com/wildegor/winston-telegram#readme",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "logging",
+    "logger",
+    "winston-telegram",
+    "winston",
+    "telegram",
+    "bot"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "prebuild": "rimraf lib",
+    "prepare": "husky install && yarn build",
+    "build": "tsc",
+    "dev:lint": "eslint src/**/*.ts",
+    "dev:fix": "yarn dev:lint -- --fix",
+    "dev:check": "tsc --noEmit --project tsconfig.build.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "winston-transport": "^4.6.0",
+    "axios": "1.6.2"
+  },
+  "peerDependencies": {
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "@semantic-release/git": "10.0.1",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "6.14.0",
+    "@typescript-eslint/parser": "6.14.0",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "8.10.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "5.1.2",
+    "husky": "8.0.3",
+    "prettier": "3.1.1",
+    "reflect-metadata": "0.2.1",
+    "rimraf": "5.0.5",
+    "semantic-release": "22.0.12",
+    "source-map-support": "0.5.21",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.3.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
