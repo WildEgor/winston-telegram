@@ -13,6 +13,7 @@ export type TTelegramFormatMessageFn = <T extends NodeJS.Dict<unknown>>(params: 
 
 export interface ITelegramRequestPayload {
   chat_id: string;
+  message_thread_id?: number;
   token: string;
   text: string;
   disable_notification?: boolean;

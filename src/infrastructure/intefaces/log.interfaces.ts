@@ -1,7 +1,12 @@
+import { LogEntry } from 'winston';
 import { LogLevels } from '../../shared/types/log.enum';
 
-export interface ILogTo {
-  chat_id: string;
+export interface ILogEntry extends LogEntry {
+  level: LogLevels;
+  message: string;
+  metadata?: ILogPayload;
+  chat_id?: string;
+  message_thread_id?: number;
 }
 
 export interface ILogPayload {
@@ -19,12 +24,4 @@ export interface ILogPayload {
    * @description Additional log data
    */
   props?: NodeJS.Dict<unknown>;
-  to?: ILogTo;
-}
-
-export interface ILog {
-  level: LogLevels;
-  timestamp?: string;
-  message: string;
-  data?: ILogPayload;
 }

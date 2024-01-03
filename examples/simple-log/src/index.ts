@@ -1,4 +1,5 @@
 import { TelegramTransport } from '../../../src';
+import { LogLevels } from '../../../src/shared/types/log.enum';
 
 const winston = require('winston');
 
@@ -7,20 +8,24 @@ const logger = winston.createLogger({
   format: winston.format.json(),
   defaultMeta: { service: 'user-service' },
   transports: [
-      //
-      // - Write to all logs with level `info` and below to `combined.log`
-      // - Write all logs error (and below) to `error.log`.
-      //
       new TelegramTransport({
-        token: 'YOUR_TOKEN',
+        levels: [LogLevels.Info],
+        token: '6581515204:AAFECpWwl7XsNpehc0dbgWZxtg0QcVajTTg', // for demo
+        chatId: '-1002035814378', // act like default chat id
       }),
   ]
 });
 
 logger.log({
-  level: 'info',
-  message: 'Hello distributed log files!',
-  to: {
-    chatId: 'YOUR_CHAT_ID',
-  },
+  level: LogLevels.Info,
+  message: 'Send logs to default chat',
+});
+
+logger.log(LogLevels.Info,"Sent to specific chat", {
+  chat_id: '-1002035814378'
+});
+
+logger.log(LogLevels.Info, "Or send to topic!", {
+  chat_id: '-1001901864911',
+  message_thread_id: 5
 });

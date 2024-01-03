@@ -10,7 +10,7 @@ import {
 } from '../infrastructure/adapters/telegram/infrastructure/interfaces/telegram-adapter.interfaces';
 import { MessageCollector } from '../infrastructure/adapters/telegram/application/messages.collector';
 import { TelegramAdapter } from '../infrastructure/adapters/telegram/application/telegram.adapter';
-import { ILog } from '../infrastructure/intefaces/log.interfaces';
+import { ILogEntry } from '../infrastructure/intefaces/log.interfaces';
 import { ITelegramTransportOpts } from '../infrastructure/intefaces/options.interfaces';
 
 export class TelegramTransport extends Transport {
@@ -74,7 +74,7 @@ export class TelegramTransport extends Transport {
     return new TelegramTransport(opts);
   }
 
-  log(info: ILog, next: () => void): void {
+  log(info: ILogEntry, next: () => void): void {
     if (!this.silent && this._lvls.has(info.level)) {
       // TODO: remove any
       const formatOptions: ITelegramFormatOptions<any> = {
@@ -82,14 +82,16 @@ export class TelegramTransport extends Transport {
         timestamp: info.timestamp || new Date().toISOString(),
         level: info.level?.toUpperCase() as LogLevels,
         message: info.message,
-        metadata: info.data || {},
+        metadata: info.metadata || {},
       };
 
       const payload: ITelegramRequestPayload = {
         token: this._token,
-        chat_id: this._chatId || info?.data?.to?.chat_id || '',
+        chat_id: info?.chat_id || this._chatId || '',
+        message_thread_id: info?.message_thread_id,
         text: '',
       };
+
       if (this._formatMessage) {
         payload.text = this._formatMessage(formatOptions, info);
       }

@@ -42,8 +42,9 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "winston-transport": "^4.6.0",
-    "axios": "1.6.2"
+    "axios": "1.6.2",
+    "winston": "^3.11.0",
+    "winston-transport": "^4.6.0"
   },
   "peerDependencies": {
     "winston": "^3.0.0"
@@ -51,6 +52,7 @@
   "devDependencies": {
     "@semantic-release/git": "10.0.1",
     "@types/node": "^20.10.6",
+    "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "6.14.0",
     "@typescript-eslint/parser": "6.14.0",
     "commitizen": "4.3.0",
