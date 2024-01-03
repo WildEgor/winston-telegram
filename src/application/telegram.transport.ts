@@ -24,7 +24,7 @@ export class TelegramTransport extends Transport {
   private readonly _template: string;
   private readonly _formatMessage?: TTelegramFormatMessageFn;
   private readonly _batchingDelay: number;
-  private readonly _batchingSeparator: string;
+  // private readonly _batchingSeparator: string;
   private readonly _sender: ITelegramAdapter;
   private readonly _messageCollector: IMessageCollector<ITelegramRequestPayload>;
 
@@ -56,7 +56,7 @@ export class TelegramTransport extends Transport {
     **Message:** [{message}]`;
     this._formatMessage = options.formatMessage;
     this._batchingDelay = options.batchingDelay || 0;
-    this._batchingSeparator = options.batchingSeparator || '\n\n';
+    // this._batchingSeparator = options.batchingSeparator || '\n\n';
     this._messageCollector = new MessageCollector<ITelegramRequestPayload>({
       timeout: options.batchingDelay || 1000,
     });
