@@ -16,6 +16,7 @@ const logger = winston.createLogger({
   ]
 });
 
+// TEST
 logger.log({
   level: LogLevels.Info,
   message: 'Send logs to default chat',
