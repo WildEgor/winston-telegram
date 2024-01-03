@@ -1,0 +1,71 @@
+{
+  "name": "simple-log",
+  "version": "0.0.1",
+  "description": "Demo",
+  "author": "Kartashov Egor",
+  "private": true,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wildegor/winston-telegram.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wildegor/winston-telegram/issues"
+  },
+  "homepage": "https://github.com/wildegor/winston-telegram#readme",
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "logging",
+    "logger",
+    "winston-telegram",
+    "winston",
+    "telegram",
+    "bot"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "start:dev": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev:lint": "eslint src/**/*.ts",
+    "dev:fix": "yarn dev:lint -- --fix",
+    "dev:check": "tsc --noEmit --project tsconfig.build.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "winston": "^3.0.0",
+    "winston-transport": "^4.6.0",
+    "axios": "1.6.2"
+  },
+  "peerDependencies": {
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "6.14.0",
+    "@typescript-eslint/parser": "6.14.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "8.10.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "5.1.2",
+    "husky": "8.0.3",
+    "prettier": "3.1.1",
+    "reflect-metadata": "0.2.1",
+    "rimraf": "5.0.5",
+    "semantic-release": "22.0.12",
+    "source-map-support": "0.5.21",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.3.3"
+  }
+}
