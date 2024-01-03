@@ -3,6 +3,7 @@
 [![NPM](https://nodei.co/npm/winston-telegram.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@wildegor/winston-telegram/)
 
 A [Telegram][0] transport for [winston][1].
+Originally forked from [ivanmarban/winston-telegram][5] and updated to support winston 3.x and some features
 
 [![Version npm](https://img.shields.io/npm/v/winston-telegram.svg)](https://www.npmjs.com/package/@wildegor/winston-telegram)
 [![npm Downloads](https://img.shields.io/npm/dw/winston-telegram.svg)](https://npmcharts.com/compare/@wildegor/winston-telegram?minimal=true)
@@ -72,3 +73,4 @@ $ yarn start
 [2]: https://github.com/wildegor/winston-telegram/tree/1.x
 [3]: https://github.com/wildegor/winston-telegram/tree/main/examples
 [4]: https://core.telegram.org/bots/api#formatting-options
+[5]: https://github.com/ivanmarban/winston-telegram
