@@ -32,9 +32,6 @@ jobs:
       - name: Release
         id: release
         run: |
-          yarn ci:token
           yarn release
         env:
-          NODE_ENV_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-          ORG: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
