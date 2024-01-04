@@ -14,8 +14,6 @@
     [
       "@semantic-release/npm",
       {
-        "assets": ["package.json", "yarn.lock", "README.md"],
-        "pkgRoot": "lib/",
         "npmPublish": true
       }
     ],
@@ -28,8 +26,6 @@
     [
       "@semantic-release/git",
       {
-        "assets": ["package.json", "yarn.lock", "README.md"],
-        "pkgRoot": "lib/",
         "message": "chore(release): ${nextRelease.version}"
       }
     ]

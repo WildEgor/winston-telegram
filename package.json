@@ -5,8 +5,8 @@
   "author": "Kartashov Egor",
   "private": false,
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wildegor/winston-telegram.git"
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/wildegor/winston-telegram#readme",
   "files": [
-    "lib/**/*"
+    "dist",
+    "README.md"
   ],
   "keywords": [
     "logging",
