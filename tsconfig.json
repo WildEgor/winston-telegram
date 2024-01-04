@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "declaration": true,
@@ -20,8 +21,8 @@
   "include": ["src"],
   "exclude": [
     "node_modules",
-    "node_modules",
-    "**/__tests__/*"
+    "dist",
+    "**/*.test.ts"
   ],
   "paths": {
     "@src/*": [
