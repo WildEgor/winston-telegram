@@ -27,11 +27,6 @@
     [
       "@semantic-release/git",
       {
-        "assets": [
-          "package.json",
-          "README.md",
-          "lib/**/*"
-        ],
         "message": "chore(release): ${nextRelease.version}"
       }
     ]
