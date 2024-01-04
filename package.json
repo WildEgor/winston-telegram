@@ -12,7 +12,8 @@
     "url": "git+https://github.com/wildegor/winston-telegram.git"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "pkgRoot": "lib"
   },
   "bugs": {
     "url": "https://github.com/wildegor/winston-telegram/issues"
