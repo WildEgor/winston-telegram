@@ -38,7 +38,7 @@
     "build": "tsc",
     "dev:lint": "eslint src/**/*.ts",
     "dev:fix": "yarn dev:lint -- --fix",
-    "dev:check": "tsc --noEmit --project tsconfig.build.json",
+    "dev:check": "tsc --noEmit --project tsconfig.json",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
