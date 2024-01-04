@@ -1252,10 +1252,10 @@
     "@webassemblyjs/ast" "1.11.6"
     "@xtuc/long" "4.2.2"
 
-"@wildegor/winston-telegram@1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@wildegor/winston-telegram/-/winston-telegram-1.1.2.tgz#c3b97726ecebe9cfdaedbfe9929e7b63155fbcc0"
-  integrity sha512-HxGbsij2EnXlah4e6ErCGW4TLOL5cddMd45M1Jy/GZdyggG1TxxRYDQNhFG6j67+pSXfxdHDaDsrH0xeh4giUg==
+"@wildegor/winston-telegram@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@wildegor/winston-telegram/-/winston-telegram-1.1.3.tgz#14e1cd120fe6b58aa040d48eea46aad99427a481"
+  integrity sha512-rqZ6vJEeVizf7lwkbeYT4whQwAcfonV8s68T7E2Ra7zfz38/OEJyqUJC42Jjxrz2A8JNZIdTfXSzLcW1Bs1uKA==
   dependencies:
     axios "1.6.2"
     winston "^3.11.0"

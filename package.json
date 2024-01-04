@@ -13,7 +13,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "pkgRoot": "lib"
+    "pkgRoot": "lib/**/*"
   },
   "bugs": {
     "url": "https://github.com/wildegor/winston-telegram/issues"
